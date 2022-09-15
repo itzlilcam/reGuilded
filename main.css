@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    scroll-behavior: smooth;
     font-family: 'Oswald', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
@@ -29,6 +30,19 @@
     --badge-soon-secondary: rgb(228, 228, 63);
     --badge-new-main: rgb(92, 53, 53);
     --badge-new-secondary: rgb(219, 79, 79);
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg4);
+    border-radius: 40px;
 }
 
 /* Badges */
@@ -144,7 +158,7 @@ nav .nav-brand {
 
 .section-hero-bottom .btn {
     padding: 1rem 5rem;
-    color: var(--discord-white);
+    color: var(--discord-white) !important;
     margin: 0 1rem;
     border: none;
     border-radius: 5px;
@@ -161,11 +175,11 @@ nav .nav-brand {
 }
 
 .section-hero-bottom .download {
-    background-color: var(--reGuilded-red);
+    background-color: var(--reGuilded-red) !important;
 }
 
 .section-hero-bottom .join-us-hero {
-    background-color: var(--discord-bg-main);
+    background-color: var(--discord-bg-main) !important;
 }
 
 .section-hero-bottom .fa-solid,
@@ -179,6 +193,62 @@ nav .nav-brand {
     font-weight: 600;
     color: var(--discord-white-secondary) !important;
     text-decoration: none;
+}
+
+/* reGuilded FAQ */
+
+.section-main {
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient(circle at top center, var(--bg3), var(--bg2));
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: calc(100vh - 112px);
+    max-height: fit-content;
+    min-height: 532px;
+}
+
+.section-main-inner {
+    margin: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-main .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 1000px;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--discord-bg-secondary);
+    color: var(--discord-white-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 200ms;
+}
+
+.section-main .btn:hover,
+.section-main .btn:focus,
+.section-main .btn:active {
+    background-color: transparent !important;
+    border: 1px solid var(--discord-white) !important;
+    color: var(--discord-white);
+    transition: 200ms;
+}
+
+.section-main .card {
+    background-color: transparent;
+    color: var(--discord-white);
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+    border: 1px solid var(--reGuilded-red);
 }
 
 /* Footer */
